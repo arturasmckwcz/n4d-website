@@ -1,0 +1,45 @@
+name: Feature Request
+description: Suggest an idea for this project
+title: "[FEATURE]: "
+labels: ["enhancement"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to suggest a feature!
+  - type: input
+    id: feature-name
+    attributes:
+      label: Feature Name
+      description: What is the name of the feature?
+      placeholder: Ex. Add dark mode
+    validations:
+      required: true
+  - type: textarea
+    id: feature-description
+    attributes:
+      label: Describe the Feature
+      description: Describe the feature you would like to see.
+      placeholder: Tell us more about your feature
+    validations:
+      required: true
+  - type: dropdown
+    id: feature-priority
+    attributes:
+      label: Priority
+      description: How important is this feature to you?
+      options:
+        - Low
+        - Medium
+        - High
+    validations:
+      required: true
+  - type: checkboxes
+    id: feature-related
+    attributes:
+      label: Related Issues
+      description: Are there any related issues?
+      options:
+        - label: "I have searched the existing issues"
+          required: true
