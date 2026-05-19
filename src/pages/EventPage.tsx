@@ -55,29 +55,19 @@ export default function EventPage() {
       <Container>
         <Title>VolunTea</Title>
         <Meta>
-          <MetaItem>
-            📅 Donnerstag, 04.06.2026 &mdash; 17:30&ndash;19:30 Uhr (Einlass ab
-            17:00)
-          </MetaItem>
-          <MetaItem>
-            📍 Art Space in Exile, Elsenstraße 87, 12435 Berlin
-          </MetaItem>
-          <MetaItem>👥 Für Freiwillige, die Geflüchtete unterstützen</MetaItem>
-          <MetaItem>🗣️ Sprache: Deutsch</MetaItem>
+          <MetaItem>📅 Thursday, 5 June 2026 &mdash; 5:30&ndash;7:30 PM (Doors open at 5:00 PM)</MetaItem>
+          <MetaItem>📍 Art Space in Exile, Elsenstraße 87, 12435 Berlin</MetaItem>
+          <MetaItem>👥 For volunteers who support refugees</MetaItem>
+          <MetaItem>🗣️ Language: English</MetaItem>
         </Meta>
         <Description>
-          Ein kleines Treffen für Freiwillige, um Erfahrungen auszutauschen und
-          mehr darüber zu erfahren, wie man Menschen in Not in Berlin
-          unterstützen kann. Ob du schon aktiv bist oder erst anfangen möchtest
-          &mdash; komm vorbei, triff das Team und andere Freiwillige, und lass
-          dich inspirieren.
+          A small gathering for volunteers to share experiences and learn more
+          about how to support people in need in Berlin. Whether you&apos;re
+          already active or just getting started &mdash; come by, meet the team
+          and other volunteers, and get inspired.
         </Description>
-        <RegisterButton
-          href={REGISTRATION_URL}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Jetzt anmelden
+        <RegisterButton href={REGISTRATION_URL} target="_blank" rel="noopener noreferrer">
+          Register now
         </RegisterButton>
       </Container>
     </StaticPageLayout>
