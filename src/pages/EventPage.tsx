@@ -55,7 +55,7 @@ export default function EventPage() {
       <Container>
         <Title>VolunTea</Title>
         <Meta>
-          <MetaItem>📅 Thursday, 5 June 2026 &mdash; 5:30&ndash;7:30 PM (Doors open at 5:00 PM)</MetaItem>
+          <MetaItem>📅 Thursday, 4 June 2026 &mdash; 5:30&ndash;7:30 PM (Doors open at 5:00 PM)</MetaItem>
           <MetaItem>📍 Art Space in Exile, Elsenstraße 87, 12435 Berlin</MetaItem>
           <MetaItem>👥 For volunteers who support refugees</MetaItem>
           <MetaItem>🗣️ Language: English</MetaItem>
