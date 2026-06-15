@@ -49,12 +49,25 @@ const RegisterButton = styled.a`
   }
 `;
 
-const CommunityTagline = styled.p`
+const CommunityTagline = styled.div`
   margin-top: 40px;
   font-size: 0.85rem;
   color: #888;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px 16px;
   line-height: 1.8;
-  text-align: center;
+`;
+
+const LtrTag = styled.span`
+  direction: ltr;
+  unicode-bidi: embed;
+`;
+
+const RtlTag = styled.span`
+  direction: rtl;
+  unicode-bidi: embed;
 `;
 
 export default function EventPage() {
@@ -78,7 +91,10 @@ export default function EventPage() {
           Register now
         </RegisterButton>
         <CommunityTagline>
-          Підтримуємо всі спільноти! &middot; Поддерживаем все сообщества! &middot; حمایت از همه جوامع‌! &middot; ندعم جميع المجتمعات!
+          <LtrTag>Підтримуємо всі спільноти!</LtrTag>
+          <LtrTag>Поддерживаем все сообщества!</LtrTag>
+          <RtlTag>!حمایت از همه جوامع</RtlTag>
+          <RtlTag>!ندعم جميع المجتمعات</RtlTag>
         </CommunityTagline>
       </Container>
     </StaticPageLayout>
