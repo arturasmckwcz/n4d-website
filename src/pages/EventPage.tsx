@@ -49,13 +49,21 @@ const RegisterButton = styled.a`
   }
 `;
 
+const CommunityTagline = styled.p`
+  margin-top: 40px;
+  font-size: 0.85rem;
+  color: #888;
+  line-height: 1.8;
+  text-align: center;
+`;
+
 export default function EventPage() {
   return (
     <StaticPageLayout>
       <Container>
         <Title>VolunTea</Title>
         <Meta>
-          <MetaItem>📅 Thursday, 9 July 2026 &mdash; 5:30&ndash;7:30 PM (Doors open at 5:00 PM)</MetaItem>
+          <MetaItem>📅 Thursday, 9 July 2026 &mdash; 5:30&ndash;7:00 PM (Doors open at 5:00 PM)</MetaItem>
           <MetaItem>📍 Art Space in Exile, Elsenstraße 87, 12435 Berlin</MetaItem>
           <MetaItem>👥 For volunteers who support refugees</MetaItem>
           <MetaItem>🗣️ Language: English</MetaItem>
@@ -69,6 +77,9 @@ export default function EventPage() {
         <RegisterButton href={REGISTRATION_URL} target="_blank" rel="noopener noreferrer">
           Register now
         </RegisterButton>
+        <CommunityTagline>
+          Підтримуємо всі спільноти! &middot; Поддерживаем все сообщества! &middot; حمایت از همه جوامع‌! &middot; ندعم جميع المجتمعات!
+        </CommunityTagline>
       </Container>
     </StaticPageLayout>
   );
