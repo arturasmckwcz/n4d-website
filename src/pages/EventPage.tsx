@@ -79,7 +79,7 @@ export default function EventPage() {
           <MetaItem>📅 Thursday, 9 July 2026 &mdash; 5:30&ndash;7:00 PM (Doors open at 5:00 PM)</MetaItem>
           <MetaItem>📍 Art Space in Exile, Elsenstraße 87, 12435 Berlin</MetaItem>
           <MetaItem>👥 For volunteers who support refugees</MetaItem>
-          <MetaItem>🗣️ Language: English</MetaItem>
+          <MetaItem>🗣️ Language: German, Ukrainian, Russian</MetaItem>
         </Meta>
         <Description>
           A small gathering for volunteers to share experiences and learn more
