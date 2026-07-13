@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 import { StaticPageLayout } from "../components/Layouts/staticPageLayout";
 
-const REGISTRATION_URL = "https://docs.google.com/forms/d/e/1FAIpQLSeoexTJv7HAxuaMvab-tVVcR0pDxyeQKsGkSAlAmJOpoWpW0g/viewform?usp=publish-editor";
+const REGISTRATION_URL = "https://docs.google.com/forms/d/e/1FAIpQLScXWc342tXAFKy4Duf62W4Rc0RtKYAlXrhnv2Ueho5UFEYsAg/viewform?usp=publish-editor";
 
 const Container = styled.div`
   max-width: 680px;
@@ -74,18 +74,14 @@ export default function EventPage() {
   return (
     <StaticPageLayout>
       <Container>
-        <Title>VolunTea</Title>
+        <Title>Need4Deed Open Air</Title>
         <Meta>
-          <MetaItem>📅 Thursday, 9 July 2026 &mdash; 5:30&ndash;7:00 PM (Doors open at 5:00 PM)</MetaItem>
-          <MetaItem>📍 Art Space in Exile, Elsenstraße 87, 12435 Berlin</MetaItem>
-          <MetaItem>👥 For volunteers who support refugees</MetaItem>
-          <MetaItem>🗣️ Language: German, Ukrainian, Russian</MetaItem>
+          <MetaItem>📅 Saturday, 29 August 2026 &mdash; 5:00&ndash;9:00 PM</MetaItem>
+          <MetaItem>📍 Elsenstraße 87, 12435 Berlin</MetaItem>
+          <MetaItem>👥 Open to everyone</MetaItem>
         </Meta>
         <Description>
-          A small gathering for volunteers to share experiences and learn more
-          about how to support people in need in Berlin. Whether you&apos;re
-          already active or just getting started &mdash; come by, meet the team
-          and other volunteers, and get inspired.
+          It&apos;s that time of the year again. Celebrating solidarity.
         </Description>
         <RegisterButton href={REGISTRATION_URL} target="_blank" rel="noopener noreferrer">
           Register now
