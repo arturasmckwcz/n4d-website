@@ -76,7 +76,7 @@ export default function EventPage() {
       <Container>
         <Title>Need4Deed Open Air</Title>
         <Meta>
-          <MetaItem>📅 Saturday, 29 August 2026 &mdash; 5:00&ndash;9:00 PM</MetaItem>
+          <MetaItem>📅 Saturday, 29 August 2026 &mdash; 3:00&ndash;7:00 PM</MetaItem>
           <MetaItem>📍 Elsenstraße 87, 12435 Berlin</MetaItem>
           <MetaItem>👥 Open to everyone</MetaItem>
         </Meta>
