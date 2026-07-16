@@ -81,7 +81,10 @@ export default function EventPage() {
           <MetaItem>👥 Open to everyone</MetaItem>
         </Meta>
         <Description>
-          It&apos;s that time of the year again. Celebrating solidarity.
+          It&apos;s that time of the year again. Celebrating solidarity. We
+          will keep you up to date here once we can share more info on
+          artists and other surprises :) And once registered, we will send
+          you a reminder a few days before the event!
         </Description>
         <RegisterButton href={REGISTRATION_URL} target="_blank" rel="noopener noreferrer">
           Register now
