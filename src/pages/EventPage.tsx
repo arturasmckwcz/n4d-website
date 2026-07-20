@@ -7,7 +7,7 @@ import styled from "styled-components";
 import { StaticPageLayout } from "../components/Layouts/staticPageLayout";
 
 const REGISTRATION_URL =
-  "https://docs.google.com/forms/d/e/1FAIpQLScXWc342tXAFKy4Duf62W4Rc0RtKYAlXrhnv2Ueho5UFEYsAg/viewform?usp=publish-editor";
+  "https://docs.google.com/forms/d/e/1FAIpQLSe5wRZ0U0wEb_QvRbfuGzM196jRIVflUBC_273wSk2Dl3Gcnw/viewform";
 
 const Container = styled.div`
   max-width: 680px;
@@ -37,6 +37,7 @@ const Description = styled.p`
   font-size: 1rem;
   line-height: 1.7;
   margin-bottom: 40px;
+  white-space: pre-line;
 `;
 
 const RegisterButton = styled.a`
@@ -94,18 +95,20 @@ export default function EventPage() {
   return (
     <StaticPageLayout>
       <Container>
-        <Title>Need4Deed Open Air</Title>
+        <Title>Sommerfest</Title>
         <Meta>
           {isGerman ? (
             <MetaItem>
-              📅 Samstag, 29. August 2026 &mdash; 15:00&ndash;19:00 Uhr
+              📅 Samstag, 31. August 2026 &mdash; 13:00&ndash;18:00 Uhr
             </MetaItem>
           ) : (
             <MetaItem>
-              📅 Saturday, 29 August 2026 &mdash; 3:00&ndash;7:00 PM
+              📅 Saturday, 31 August 2026 &mdash; 1:00&ndash;6:00 PM
             </MetaItem>
           )}
-          <MetaItem>📍 Elsenstraße 87, 12435 Berlin</MetaItem>
+          <MetaItem>
+            📍 ArtSpace in Exile, Elsenstraße 87, 12435 Berlin (Alt-Treptow)
+          </MetaItem>
           <MetaItem>
             {isGerman ? "👥 Offen für alle" : "👥 Open to everyone"}
           </MetaItem>
@@ -113,18 +116,30 @@ export default function EventPage() {
         <Description>
           {isGerman ? (
             <>
-              Es ist wieder soweit. Wir feiern Solidarität. Wir halten euch hier
-              auf dem Laufenden, sobald wir mehr Infos zu Künstler*innen und
-              anderen Überraschungen teilen können :) Und sobald ihr euch
-              angemeldet habt, schicken wir euch ein paar Tage vor der
-              Veranstaltung eine Erinnerung!
+              Liebe Freiwillige, wir freuen uns, euch zu unserem Sommerfest
+              einladen zu dürfen, das in Zusammenarbeit mit Du für Berlin am
+              Samstag, den 31. August von 13:00 bis 18:00 Uhr organisiert wird.
+              {"\n"}Egal, ob Sie bereits freiwillig helfen oder sich für die
+              Freiwilligenarbeit mit geflüchteten Menschen interessieren, kommen
+              Sie vorbei, bringen Sie einen Freund oder mehrere mit!
+              {"\n"}- 13:00–13:30 Begrüßung{"\n"}- 13:30–18:00 Live Musik
+              (Bağlama), Live Musik (Jazz und Soukous), Live Electronic DJ Set
+              {"\n"}- 13:30–17:00 Buffet Der Begegnung mit Über den Tellerand
+              e.V., Samenbomben-Workshop, Gruppenworkshop{"\n"}- Ganztägig:
+              Kinderbereich, Leichte Speisen und Getränke gratis!
             </>
           ) : (
             <>
-              It&apos;s that time of the year again. Celebrating solidarity. We
-              will keep you up to date here once we can share more info on
-              artists and other surprises :) And once registered, we will send
-              you a reminder a few days before the event!
+              Dear volunteers, we are pleased to invite you to our Sommerfest
+              organized in collaboration with Du für Berlin on Saturday, August
+              31st from 13:00 till 18:00.
+              {"\n"}Whether you&apos;re already a volunteer or interested in
+              volunteering with refugees, come join us, bring a friend or more!
+              {"\n"}- 13:00-13:30 Meet and Greet{"\n"}- 13:30-18:00 Live Music
+              (Bağlama), Live Music (Jazz and Soukous), Live Electronic DJ Set
+              {"\n"}- 13:30-17:00 Food it yourself with Über den Tellerand e.V.,
+              Seedbombs Workshop, Group Workshop{"\n"}- All Day: Kids Space,
+              Light food and drinks are on the house!
             </>
           )}
         </Description>
