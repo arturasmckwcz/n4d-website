@@ -93,7 +93,7 @@ export function OpportunityCards() {
           url={`${urlApiOpportunity}/legacy`} // external API endpoint for opportunity cards
           opportunityParams={{
             search: {
-              status: ["Volunteers Needed", "Search in process"],
+              status: ["Search in process"],
               opportunity_type: [
                 OpportunityType.GENERAL,
                 OpportunityType.ACCOMPANYING,

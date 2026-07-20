@@ -191,6 +191,10 @@ function App() {
               />
 
               <Route path={`/${Subpages.EVENT_PAGE}`} element={<EventPage />} />
+              <Route
+                path={`/${Subpages.EVENT_PAGE}/:lng`}
+                element={<EventPage />}
+              />
               <Route path="/:lng" element={<Landing />} />
               <Route
                 path="/new/static-page-layout-test"

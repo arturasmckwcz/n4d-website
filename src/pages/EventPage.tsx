@@ -1,8 +1,13 @@
+import { Lang } from "need4deed-sdk";
+import { useEffect } from "react";
+import { useTranslation } from "react-i18next";
+import { useParams } from "react-router-dom";
 import styled from "styled-components";
 
 import { StaticPageLayout } from "../components/Layouts/staticPageLayout";
 
-const REGISTRATION_URL = "https://forms.gle/hFJTszu4tCoeDRy4A";
+const REGISTRATION_URL =
+  "https://docs.google.com/forms/d/e/1FAIpQLScXWc342tXAFKy4Duf62W4Rc0RtKYAlXrhnv2Ueho5UFEYsAg/viewform?usp=publish-editor";
 
 const Container = styled.div`
   max-width: 680px;
@@ -49,27 +54,93 @@ const RegisterButton = styled.a`
   }
 `;
 
+const CommunityTagline = styled.div`
+  margin-top: 40px;
+  font-size: 0.85rem;
+  color: #888;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px 16px;
+  line-height: 1.8;
+`;
+
+const LtrTag = styled.span`
+  direction: ltr;
+  unicode-bidi: embed;
+`;
+
+const RtlTag = styled.span`
+  direction: rtl;
+  unicode-bidi: embed;
+`;
+
 export default function EventPage() {
+  const { lng } = useParams();
+  const { i18n } = useTranslation();
+
+  // Visiting /event-page/de directly should switch the site's language too,
+  // matching how Subpage.tsx handles its own :lng param.
+  useEffect(() => {
+    if (lng === Lang.DE || lng === Lang.EN) {
+      i18n.changeLanguage(lng);
+    }
+  }, [lng, i18n]);
+
+  // Driven by i18n.language (not just the URL param) so flipping the DE/EN
+  // switcher in the header also updates this page without a navigation.
+  const isGerman = i18n.language === Lang.DE;
+
   return (
     <StaticPageLayout>
       <Container>
-        <Title>VolunTea</Title>
+        <Title>Need4Deed Open Air</Title>
         <Meta>
-          <MetaItem>📅 Donnerstag, 05.06.2026 &mdash; 17:30&ndash;19:30 Uhr (Einlass ab 17:00)</MetaItem>
-          <MetaItem>📍 Art Space in Exile, Elsenstraße 87, 12435 Berlin</MetaItem>
-          <MetaItem>👥 Für Freiwillige, die Geflüchtete unterstützen</MetaItem>
-          <MetaItem>🗣️ Sprache: Deutsch</MetaItem>
+          {isGerman ? (
+            <MetaItem>
+              📅 Samstag, 29. August 2026 &mdash; 15:00&ndash;19:00 Uhr
+            </MetaItem>
+          ) : (
+            <MetaItem>
+              📅 Saturday, 29 August 2026 &mdash; 3:00&ndash;7:00 PM
+            </MetaItem>
+          )}
+          <MetaItem>📍 Elsenstraße 87, 12435 Berlin</MetaItem>
+          <MetaItem>
+            {isGerman ? "👥 Offen für alle" : "👥 Open to everyone"}
+          </MetaItem>
         </Meta>
         <Description>
-          Ein kleines Treffen für Freiwillige, um Erfahrungen auszutauschen und
-          mehr darüber zu erfahren, wie man Menschen in Not in Berlin
-          unterstützen kann. Ob du schon aktiv bist oder erst anfangen möchtest
-          &mdash; komm vorbei, triff das Team und andere Freiwillige, und lass
-          dich inspirieren.
+          {isGerman ? (
+            <>
+              Es ist wieder soweit. Wir feiern Solidarität. Wir halten euch hier
+              auf dem Laufenden, sobald wir mehr Infos zu Künstler*innen und
+              anderen Überraschungen teilen können :) Und sobald ihr euch
+              angemeldet habt, schicken wir euch ein paar Tage vor der
+              Veranstaltung eine Erinnerung!
+            </>
+          ) : (
+            <>
+              It&apos;s that time of the year again. Celebrating solidarity. We
+              will keep you up to date here once we can share more info on
+              artists and other surprises :) And once registered, we will send
+              you a reminder a few days before the event!
+            </>
+          )}
         </Description>
-        <RegisterButton href={REGISTRATION_URL} target="_blank" rel="noopener noreferrer">
-          Jetzt anmelden
+        <RegisterButton
+          href={REGISTRATION_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {isGerman ? "Jetzt anmelden" : "Register now"}
         </RegisterButton>
+        <CommunityTagline>
+          <LtrTag>Підтримуємо всі спільноти!</LtrTag>
+          <LtrTag>Поддерживаем все сообщества!</LtrTag>
+          <RtlTag>!حمایت از همه جوامع</RtlTag>
+          <RtlTag>!ندعم جميع المجتمعات</RtlTag>
+        </CommunityTagline>
       </Container>
     </StaticPageLayout>
   );
