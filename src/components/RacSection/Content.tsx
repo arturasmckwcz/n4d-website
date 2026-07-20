@@ -1,6 +1,8 @@
+import { Lang } from "need4deed-sdk";
 import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
+import { agentRegistrationUrl } from "../../config/constants";
 import { ScreenTypes, Subpages } from "../../config/types";
 import useScreenType from "../../hooks/useScreenType";
 import { Button } from "../core/button";
@@ -27,10 +29,11 @@ const ButtonsContainer = styled.div`
 `;
 
 export default function RacContent() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const screenType = useScreenType();
   const navigate = useNavigate();
   const isMobile = screenType === ScreenTypes.MOBILE;
+  const registrationLang = i18n.language === Lang.EN ? Lang.EN : Lang.DE;
 
   return (
     <ContentContainer>
@@ -52,7 +55,7 @@ export default function RacContent() {
       <ButtonsContainer>
         <Button
           onClick={() => {
-            navigate(`/${Subpages.OPPORTUNITY_FORM}`);
+            window.location.href = agentRegistrationUrl(registrationLang);
           }}
           text={
             isMobile

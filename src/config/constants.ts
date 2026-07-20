@@ -11,6 +11,11 @@ export const CLOUDFRONT_URL = "https://d2nwrdddg8skub.cloudfront.net/images";
 export const EXTERNAL_OPPORTUNITY_FORM = `${urlApi}/de/forms/opportunity`;
 export const EXTERNAL_VOLUNTEER_FORM = `${urlApi}/de/forms/volunteer`;
 
+export const urlBackoffice =
+  import.meta.env.VITE_BACKOFFICE_URL ?? "https://app.need4deed.org";
+export const agentRegistrationUrl = (lang: string) =>
+  `${urlBackoffice}/${lang}/register/agent`;
+
 const positives = ["1", "YES", "Yes", "yes", "TRUE", "True", "true"];
 
 export const showEvent = positives.includes(import.meta.env.VITE_SHOW_EVENT);
