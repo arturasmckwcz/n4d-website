@@ -116,30 +116,35 @@ export default function EventPage() {
         <Description>
           {isGerman ? (
             <>
-              Liebe Freiwillige, wir freuen uns, euch zu unserem Sommerfest
-              einladen zu dürfen, das in Zusammenarbeit mit Du für Berlin am
-              Samstag, den 31. August von 13:00 bis 18:00 Uhr organisiert wird.
-              {"\n"}Egal, ob Sie bereits freiwillig helfen oder sich für die
-              Freiwilligenarbeit mit geflüchteten Menschen interessieren, kommen
-              Sie vorbei, bringen Sie einen Freund oder mehrere mit!
-              {"\n"}- 13:00–13:30 Begrüßung{"\n"}- 13:30–18:00 Live Musik
-              (Bağlama), Live Musik (Jazz und Soukous), Live Electronic DJ Set
-              {"\n"}- 13:30–17:00 Buffet Der Begegnung mit Über den Tellerand
-              e.V., Samenbomben-Workshop, Gruppenworkshop{"\n"}- Ganztägig:
-              Kinderbereich, Leichte Speisen und Getränke gratis!
+              Es ist wieder so weit: Freiwillige und Freund*innen feiern
+              gemeinsam Solidarität! Wir freuen uns riesig auf ein Konzert der
+              fantastischen Band Zarabudu und ein unglaubliches DJ-Set von
+              DumTak.
+              {"\n"}Es ist Wahlzeit! Wenn dir ein Thema rund um Migration,
+              Inklusion oder die Art von Unterstützung, die Migrant*innen in
+              Berlin deiner Meinung nach verdienen, wichtig ist, ist jetzt deine
+              Chance, den Politiker*innen zu sagen, was sie tun sollten. Nutze
+              die Need4Deed-Wahlbox, um einen Brief an eine Politikerin oder
+              einen Politiker zu schreiben, wir schicken ihn vor der Wahl ab.
+              {"\n"}Freu dich außerdem auf Sonnendrucke und weitere
+              Überraschungen :)
+              {"\n"}Sobald du dich angemeldet hast, schicken wir dir ein paar
+              Tage vor der Veranstaltung eine Erinnerung!
             </>
           ) : (
             <>
-              Dear volunteers, we are pleased to invite you to our Sommerfest
-              organized in collaboration with Du für Berlin on Saturday, August
-              31st from 13:00 till 18:00.
-              {"\n"}Whether you&apos;re already a volunteer or interested in
-              volunteering with refugees, come join us, bring a friend or more!
-              {"\n"}- 13:00-13:30 Meet and Greet{"\n"}- 13:30-18:00 Live Music
-              (Bağlama), Live Music (Jazz and Soukous), Live Electronic DJ Set
-              {"\n"}- 13:30-17:00 Food it yourself with Über den Tellerand e.V.,
-              Seedbombs Workshop, Group Workshop{"\n"}- All Day: Kids Space,
-              Light food and drinks are on the house!
+              It&apos;s that time of year again: volunteers and friends
+              celebrating solidarity! We&apos;re lucky to have a concert from
+              the fantastic band Zarabudu and an incredible DJ set from DumTak.
+              {"\n"}It&apos;s election time! If there&apos;s a topic related to
+              migration, inclusion, or the kind of support you think migrants in
+              Berlin deserve, now&apos;s your chance to say what politicians
+              should do about it. Use the Need4Deed election box to write a
+              letter to a politician, and we&apos;ll send it off before the
+              election.
+              {"\n"}Expect sun prints and more surprises too :)
+              {"\n"}Once you register, we&apos;ll send you a reminder a few days
+              before the event!
             </>
           )}
         </Description>
