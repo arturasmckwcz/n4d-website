@@ -7,7 +7,7 @@ import styled from "styled-components";
 import { StaticPageLayout } from "../components/Layouts/staticPageLayout";
 
 const REGISTRATION_URL =
-  "https://docs.google.com/forms/d/e/1FAIpQLSe5wRZ0U0wEb_QvRbfuGzM196jRIVflUBC_273wSk2Dl3Gcnw/viewform";
+  "https://docs.google.com/forms/d/e/1FAIpQLSfsr2Nppw6YGSkyFL54LRk44jv1jGtS2Q5uIPLCBTINJ1g2EA/viewform?usp=dialog";
 
 const Container = styled.div`
   max-width: 680px;
@@ -95,56 +95,59 @@ export default function EventPage() {
   return (
     <StaticPageLayout>
       <Container>
-        <Title>Sommerfest</Title>
+        <Title>{isGerman ? "Lasst uns machen" : "Let's make it happen"}</Title>
         <Meta>
           {isGerman ? (
             <MetaItem>
-              📅 Samstag, 31. August 2026 &mdash; 13:00&ndash;18:00 Uhr
+              📅 10. November 2026 &mdash; 17:30&ndash;20:30 Uhr
             </MetaItem>
           ) : (
-            <MetaItem>
-              📅 Saturday, 31 August 2026 &mdash; 1:00&ndash;6:00 PM
-            </MetaItem>
+            <MetaItem>📅 November 10, 2026 &mdash; 5:30&ndash;8:30 PM</MetaItem>
           )}
+          <MetaItem>📍 Refugio Berlin</MetaItem>
           <MetaItem>
-            📍 ArtSpace in Exile, Elsenstraße 87, 12435 Berlin (Alt-Treptow)
-          </MetaItem>
-          <MetaItem>
-            {isGerman ? "👥 Offen für alle" : "👥 Open to everyone"}
+            {isGerman
+              ? "🎟️ Eintritt frei mit Anmeldung, auf Deutsch"
+              : "🎟️ Free entry with registration, held in German"}
           </MetaItem>
         </Meta>
         <Description>
           {isGerman ? (
             <>
-              Es ist wieder so weit: Freiwillige und Freund*innen feiern
-              gemeinsam Solidarität! Wir freuen uns riesig auf ein Konzert der
-              fantastischen Band Zarabudu und ein unglaubliches DJ-Set von
-              DumTak.
-              {"\n"}Es ist Wahlzeit! Wenn dir ein Thema rund um Migration,
-              Inklusion oder die Art von Unterstützung, die Migrant*innen in
-              Berlin deiner Meinung nach verdienen, wichtig ist, ist jetzt deine
-              Chance, den Politiker*innen zu sagen, was sie tun sollten. Nutze
-              die Need4Deed-Wahlbox, um einen Brief an eine Politikerin oder
-              einen Politiker zu schreiben, wir schicken ihn vor der Wahl ab.
-              {"\n"}Freu dich außerdem auf Sonnendrucke und weitere
-              Überraschungen :)
-              {"\n"}Sobald du dich angemeldet hast, schicken wir dir ein paar
-              Tage vor der Veranstaltung eine Erinnerung!
+              Ob letztes Jahr angekommen oder vor zwanzig Jahren &ndash; viele
+              Menschen mit Migrationsgeschichte wollen etwas beitragen. Aus
+              diesem Willen wird aber nicht von selbst Ehrenamt: Das deutsche
+              Engagement-System ist oft zu starr, um so viel Energie
+              aufzunehmen. Kann migrantisches Engagement helfen, Rassismus zu
+              bekämpfen? Vielleicht, aber zuerst muss es ihn selbst überleben.
+              {"\n"}Wir laden im Rahmen der Initiative „Ehrenamt
+              interkulturell&ldquo; am 10. November 2026 ins Refugio Berlin ein.
+              Ein Abend über die Zukunft (post)migrantischen Engagements: Wie
+              wird aus Bereitschaft konkrete Tat, und wie flexibel muss das
+              Ehrenamt dafür werden? Mit Impuls aus der Wissenschaft, Podium aus
+              Politik und Zivilgesellschaft &ndash; u.a. mit Senatorin Kiziltepe
+              (Senatsverwaltung für Arbeit, Soziales, Gleichstellung,
+              Integration, Vielfalt und Antidiskriminierung) &ndash; und
+              anschließendem Netzwerken.
             </>
           ) : (
             <>
-              It&apos;s that time of year again: volunteers and friends
-              celebrating solidarity! We&apos;re lucky to have a concert from
-              the fantastic band Zarabudu and an incredible DJ set from DumTak.
-              {"\n"}It&apos;s election time! If there&apos;s a topic related to
-              migration, inclusion, or the kind of support you think migrants in
-              Berlin deserve, now&apos;s your chance to say what politicians
-              should do about it. Use the Need4Deed election box to write a
-              letter to a politician, and we&apos;ll send it off before the
-              election.
-              {"\n"}Expect sun prints and more surprises too :)
-              {"\n"}Once you register, we&apos;ll send you a reminder a few days
-              before the event!
+              Whether you arrived last year or twenty years ago, many people
+              with a migration history want to contribute. But that willingness
+              doesn&apos;t turn into volunteering on its own: Germany&apos;s
+              civic engagement system is often too rigid to absorb that much
+              energy. Can migrant engagement help fight racism? Maybe, but first
+              it has to survive it.
+              {"\n"}As part of the &quot;Ehrenamt interkulturell&quot;
+              (Volunteering Interculturally) initiative, we invite you to
+              Refugio Berlin on November 10, 2026. An evening about the future
+              of (post-)migrant engagement: how does willingness turn into
+              concrete action, and how flexible does volunteering need to become
+              for that? With input from academia, a panel from politics and
+              civil society &ndash; including Senator Kiziltepe (Senate
+              Department for Labour, Social Affairs, Equality, Integration,
+              Diversity and Anti-Discrimination) &ndash; and networking
+              afterward.
             </>
           )}
         </Description>
