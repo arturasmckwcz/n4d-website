@@ -81,10 +81,15 @@ export default function EventPage() {
   const { i18n } = useTranslation();
 
   // Visiting /event-page/de directly should switch the site's language too,
-  // matching how Subpage.tsx handles its own :lng param.
+  // matching how Subpage.tsx handles its own :lng param. This event is
+  // German-only, so bare /event-page (no /de or /en segment) defaults to
+  // German here specifically, unlike the site-wide English default in
+  // config/i18next.ts.
   useEffect(() => {
     if (lng === Lang.DE || lng === Lang.EN) {
       i18n.changeLanguage(lng);
+    } else {
+      i18n.changeLanguage(Lang.DE);
     }
   }, [lng, i18n]);
 
@@ -126,11 +131,11 @@ export default function EventPage() {
               wird aus Bereitschaft konkrete Tat, und wie flexibel muss das
               Ehrenamt dafür werden? Mit Impuls aus der Wissenschaft, Podium aus
               Politik und Zivilgesellschaft &ndash; mit Teilnahme von Senatorin
-              Kiziltepe (Senatsverwaltung für Arbeit, Soziales, Gleichstellung,
-              Integration, Vielfalt und Antidiskriminierung) und Aydan Özoğuz,
-              ehemalige Beauftragte der Bundesregierung für Migration,
-              Flüchtlinge und Integration und Vizepräsidentin des Deutschen
-              Bundestages &ndash; und anschließendem Netzwerken.
+              Cansel Kiziltepe (Senatsverwaltung für Arbeit, Soziales,
+              Gleichstellung, Integration, Vielfalt und Antidiskriminierung) und
+              Aydan Özoğuz, ehemalige Beauftragte der Bundesregierung für
+              Migration, Flüchtlinge und Integration und Vizepräsidentin des
+              Deutschen Bundestages &ndash; und anschließendem Netzwerken.
             </>
           ) : (
             <>
@@ -146,12 +151,12 @@ export default function EventPage() {
               of (post-)migrant engagement: how does willingness turn into
               concrete action, and how flexible does volunteering need to become
               for that? With input from academia, a panel from politics and
-              civil society &ndash; with Senator Kiziltepe (Senate Department
-              for Labour, Social Affairs, Equality, Integration, Diversity and
-              Anti-Discrimination) and Aydan Özoğuz, former Federal Government
-              Commissioner for Migration, Refugees and Integration and Vice
-              President of the German Bundestag &ndash; and networking
-              afterward.
+              civil society &ndash; with Senator Cansel Kiziltepe (Senate
+              Department for Labour, Social Affairs, Equality, Integration,
+              Diversity and Anti-Discrimination) and Aydan Özoğuz, former
+              Federal Government Commissioner for Migration, Refugees and
+              Integration and Vice President of the German Bundestag &ndash; and
+              networking afterward.
             </>
           )}
         </Description>
