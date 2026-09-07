@@ -125,10 +125,12 @@ export default function EventPage() {
               Ein Abend über die Zukunft (post)migrantischen Engagements: Wie
               wird aus Bereitschaft konkrete Tat, und wie flexibel muss das
               Ehrenamt dafür werden? Mit Impuls aus der Wissenschaft, Podium aus
-              Politik und Zivilgesellschaft &ndash; u.a. mit Senatorin Kiziltepe
-              (Senatsverwaltung für Arbeit, Soziales, Gleichstellung,
-              Integration, Vielfalt und Antidiskriminierung) &ndash; und
-              anschließendem Netzwerken.
+              Politik und Zivilgesellschaft &ndash; mit Teilnahme von Senatorin
+              Kiziltepe (Senatsverwaltung für Arbeit, Soziales, Gleichstellung,
+              Integration, Vielfalt und Antidiskriminierung) und Aydan Özoğuz,
+              ehemalige Beauftragte der Bundesregierung für Migration,
+              Flüchtlinge und Integration und Vizepräsidentin des Deutschen
+              Bundestages &ndash; und anschließendem Netzwerken.
             </>
           ) : (
             <>
@@ -144,9 +146,11 @@ export default function EventPage() {
               of (post-)migrant engagement: how does willingness turn into
               concrete action, and how flexible does volunteering need to become
               for that? With input from academia, a panel from politics and
-              civil society &ndash; including Senator Kiziltepe (Senate
-              Department for Labour, Social Affairs, Equality, Integration,
-              Diversity and Anti-Discrimination) &ndash; and networking
+              civil society &ndash; with Senator Kiziltepe (Senate Department
+              for Labour, Social Affairs, Equality, Integration, Diversity and
+              Anti-Discrimination) and Aydan Özoğuz, former Federal Government
+              Commissioner for Migration, Refugees and Integration and Vice
+              President of the German Bundestag &ndash; and networking
               afterward.
             </>
           )}
