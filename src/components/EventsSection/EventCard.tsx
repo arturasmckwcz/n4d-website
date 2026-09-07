@@ -1,10 +1,23 @@
-import { useEffect, useMemo } from "react";
-import { EventN4DType, Lang } from "need4deed-sdk";
+import { useEffect } from "react";
+import { EventN4DType } from "need4deed-sdk";
 import { useTranslation } from "react-i18next";
 import styled from "styled-components";
-import useEvents from "../../hooks/api/useEvents";
 import { CustomHeading, Heading4 } from "../styled/text";
 import { formatDateRange } from "../../utils";
+
+// Hardcoded rather than fetched: useEvents()'s live API call was stuck in
+// permanent isLoading (showing "Loading upcoming events..." indefinitely on
+// production), so this mirrors EventPage.tsx's own hardcoded "Lasst uns
+// machen" content directly instead of depending on that broken fetch.
+const UPCOMING_EVENT = {
+  title: { de: "Lasst uns machen", en: "Let's make it happen" },
+  date: new Date("2026-11-10T17:30:00+01:00"),
+  dateEnd: new Date("2026-11-10T20:30:00+01:00"),
+  shortDescription: {
+    de: "Ein Abend über die Zukunft (post)migrantischen Engagements, im Rahmen der Initiative „Ehrenamt interkulturell“ im Refugio Berlin.",
+    en: 'An evening about the future of (post-)migrant engagement, part of the "Ehrenamt interkulturell" initiative at Refugio Berlin.',
+  },
+};
 
 const Card = styled.div`
   display: flex;
@@ -34,35 +47,11 @@ interface Props {
 
 export default function EventCard({ onEventDataFetch }: Props) {
   const { i18n } = useTranslation();
-  const language = i18n.language as Lang;
-
-  const [events, isLoading] = useEvents(language);
-
-  /* events[0]: corresponds to default 'VolunTea' event! */
-  const upcomingEvent = useMemo(
-    () => events?.find((event) => event.active) || events[0],
-    [events],
-  );
+  const isGerman = i18n.language === "de";
 
   useEffect(() => {
-    if (upcomingEvent) onEventDataFetch(upcomingEvent.type);
-  }, [onEventDataFetch, upcomingEvent]);
-
-  if (isLoading) {
-    return (
-      <Heading4 color="var(--color-white)">Loading upcoming events...</Heading4>
-    );
-  }
-
-  if (!upcomingEvent) {
-    return (
-      <Heading4 color="var(--color-white)">
-        No upcoming event available currently.
-      </Heading4>
-    );
-  }
-
-  const filteredDesc = upcomingEvent.shortDescription.replace(/\\n/g, "\n"); // Remove '\n'
+    onEventDataFetch(EventN4DType.WORKSHOP);
+  }, [onEventDataFetch]);
 
   return (
     <Card>
@@ -75,19 +64,25 @@ export default function EventCard({ onEventDataFetch }: Props) {
             color="var(--color-midnight)"
             margin="0px"
           >
-            {upcomingEvent.title}
+            {isGerman ? UPCOMING_EVENT.title.de : UPCOMING_EVENT.title.en}
           </CustomHeading>
         </EventTitleTag>
 
         <Heading4 color="var(--color-white)" margin={0}>
           {formatDateRange(
-            new Date(upcomingEvent.date),
-            upcomingEvent.dateEnd && new Date(upcomingEvent.dateEnd),
+            UPCOMING_EVENT.date,
+            UPCOMING_EVENT.dateEnd,
+            " | ",
+            isGerman ? "de-DE" : "en-US",
           )}
         </Heading4>
       </EventHeadLine>
 
-      <Heading4 color="var(--color-white)">{filteredDesc}</Heading4>
+      <Heading4 color="var(--color-white)">
+        {isGerman
+          ? UPCOMING_EVENT.shortDescription.de
+          : UPCOMING_EVENT.shortDescription.en}
+      </Heading4>
     </Card>
   );
 }
